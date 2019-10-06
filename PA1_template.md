@@ -104,7 +104,7 @@ by_interval_sums <- summarise(by_interval, mean_steps_interval = mean(steps, na.
 with(by_interval_sums, plot(interval, mean_steps_interval, type="l"))
 ```
 
-![](PA1_template_files/figure-html/group by interval-1.png)<!-- -->
+![](PA1_template_files/figure-html/group_by_interval-1.png)<!-- -->
 
 After having already used the summarise() function, we can also find the interval in which the greatest number of steps were taken on average.  To do this, we index the Interval column of the by_interval_sums dataset by the maximum value found in the mean_steps_interval column, using which.max() to find this.
 
@@ -153,7 +153,7 @@ by_date_full_sums <- summarise(by_date_full, steps_per_day = sum(steps, na.rm=TR
 hist(by_date_full_sums$steps_per_day, n = 20, xlab = 'Daily total step count', main = 'Histogram of Daily Total Step Count (with imputed data)')
 ```
 
-![](PA1_template_files/figure-html/full histogram-1.png)<!-- -->
+![](PA1_template_files/figure-html/full_histogram-1.png)<!-- -->
 
 ```r
 mean_steps_full <- mean(by_date_full_sums$steps_per_day)
